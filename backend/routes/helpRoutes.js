@@ -1,7 +1,7 @@
 const express = require("express");
 
 const HelpArticle = require("../models/HelpArticle");
-const Contact = require("../models/contact");
+const Contact = require("../models/Contact");
 
 const router = express.Router();
 
