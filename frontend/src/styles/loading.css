@@ -1,0 +1,59 @@
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 40px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+.loading-box p {
+  margin: 15px 0 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #334155;
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+
+  border: 4px solid #e2e8f0;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: loadingSpin 0.8s linear infinite;
+}
+
+@keyframes loadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

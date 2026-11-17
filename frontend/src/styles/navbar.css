@@ -1,0 +1,1050 @@
+/* ============================================================
+   TALENTIQ CANDIDATE / PUBLIC NAVBAR
+   DARK BLUE GLASSMORPHISM
+   SAME STYLE AS RECRUITER NAVBAR
+============================================================ */
+
+.navbar {
+    position: sticky;
+    top: 18px;
+    z-index: 1000;
+
+    width: calc(100% - 70px);
+    max-width: 1500px;
+    min-height: 72px;
+
+    margin: 0 auto;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.97),
+            rgba(30, 41, 94, 0.95)
+        );
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border:
+        1px solid
+        rgba(148, 163, 184, 0.22);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.20),
+        0 4px 12px rgba(37, 99, 235, 0.10);
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    flex-shrink: 0;
+
+    margin-right: 10px;
+}
+
+
+/* ============================================================
+   LOGO BOX
+============================================================ */
+
+.logo-box {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 7px 20px
+        rgba(59, 130, 246, 0.20);
+}
+
+
+/* ============================================================
+   LOGO IMAGE
+============================================================ */
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ============================================================
+   TALENTIQ BRAND NAME
+============================================================ */
+
+.logo-name {
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+
+    white-space: nowrap;
+}
+
+.logo-name span {
+    color: #60a5fa;
+}
+
+
+/* ============================================================
+   NAVIGATION LINKS CONTAINER
+============================================================ */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 3px;
+
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* ============================================================
+   NAVIGATION LINK
+============================================================ */
+
+.nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 13px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* ============================================================
+   NAV ICON
+============================================================ */
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+    line-height: 1;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* ============================================================
+   NAV ICON HOVER
+============================================================ */
+
+.nav-link:hover .nav-icon {
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+/* ============================================================
+   NAVIGATION HOVER
+============================================================ */
+
+.nav-link:hover {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ============================================================
+   ACTIVE NAVIGATION LINK
+============================================================ */
+
+.nav-link.active {
+    color: #ffffff;
+
+    background:
+        rgba(59, 130, 246, 0.20);
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(96, 165, 250, 0.12);
+}
+
+
+/* ============================================================
+   ACTIVE ICON
+============================================================ */
+
+.nav-link.active .nav-icon {
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   ACTIVE UNDERLINE
+============================================================ */
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 4px;
+    left: 50%;
+
+    width: 22px;
+    height: 2px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #60a5fa,
+            #818cf8
+        );
+}
+
+
+/* ============================================================
+   RIGHT SIDE ACTIONS
+============================================================ */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   USER NAME
+============================================================ */
+
+.navbar-user-name {
+    max-width: 160px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 0 4px;
+}
+
+
+/* ============================================================
+   PROFILE BUTTON
+============================================================ */
+
+.profile-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 10px 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    background:
+        rgba(59, 130, 246, 0.14);
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.20);
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   PROFILE ICON
+============================================================ */
+
+.button-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    font-size: 16px;
+
+    color: #ffffff;
+
+    line-height: 1;
+}
+
+
+/* ============================================================
+   PROFILE HOVER
+============================================================ */
+
+.profile-button:hover {
+    color: #ffffff;
+
+    background:
+        rgba(59, 130, 246, 0.25);
+
+    border-color:
+        rgba(96, 165, 250, 0.35);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ============================================================
+   LOGOUT BUTTON
+============================================================ */
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding: 10px 15px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #f43f5e
+        );
+
+    border:
+        1px solid
+        rgba(248, 113, 113, 0.30);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px
+        rgba(239, 68, 68, 0.20);
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   LOGOUT HOVER
+============================================================ */
+
+.logout-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(239, 68, 68, 0.32);
+
+    background:
+        linear-gradient(
+            135deg,
+            #dc2626,
+            #e11d48
+        );
+}
+
+
+/* ============================================================
+   LOGIN BUTTON
+   PUBLIC NAVBAR
+============================================================ */
+
+.login-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 10px 18px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.25);
+
+    box-shadow:
+        0 7px 20px
+        rgba(37, 99, 235, 0.20);
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   LOGIN HOVER
+============================================================ */
+
+.login-button:hover {
+    color: #ffffff;
+
+    transform:
+        translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #4338ca
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, 0.30);
+}
+
+
+/* ============================================================
+   REGISTER BUTTON
+============================================================ */
+
+.register-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 10px 18px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 10px;
+
+    background:
+        rgba(59, 130, 246, 0.28);
+
+    border:
+        1px solid
+        rgba(96, 165, 250, 0.35);
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   REGISTER HOVER
+============================================================ */
+
+.register-button:hover {
+    color: #ffffff;
+
+    background:
+        rgba(59, 130, 246, 0.40);
+
+    border-color:
+        rgba(147, 197, 253, 0.50);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(37, 99, 235, 0.18);
+}
+
+
+/* ============================================================
+   MOBILE MENU BUTTON
+   HIDDEN ON DESKTOP
+============================================================ */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+
+    color: #e2e8f0;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border:
+        1px solid
+        rgba(148, 163, 184, 0.20);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   MOBILE MENU LINES
+============================================================ */
+
+.mobile-menu-button span {
+    width: 20px;
+    height: 2px;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background: #e2e8f0;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+/* ============================================================
+   MOBILE MENU HOVER
+============================================================ */
+
+.mobile-menu-button:hover {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-color:
+        rgba(148, 163, 184, 0.35);
+}
+
+.mobile-menu-button:hover span {
+    background: #ffffff;
+}
+
+
+/* ============================================================
+   MOBILE MENU ACTIVE
+============================================================ */
+
+.mobile-menu-button.active span:nth-child(1) {
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+
+
+/* ============================================================
+   LARGE TABLET / SMALL DESKTOP
+============================================================ */
+
+@media (max-width: 1250px) {
+
+    .navbar {
+        width: calc(100% - 40px);
+
+        gap: 12px;
+
+        padding: 0 17px;
+    }
+
+
+    .navbar-logo {
+        margin-right: 4px;
+    }
+
+
+    .logo-name {
+        font-size: 21px;
+    }
+
+
+    .navbar-menu {
+        gap: 1px;
+    }
+
+
+    .nav-link {
+        gap: 6px;
+
+        padding: 10px 9px;
+
+        font-size: 12px;
+    }
+
+
+    .nav-icon {
+        width: 17px;
+        height: 17px;
+
+        font-size: 16px;
+    }
+
+
+    .profile-button,
+    .logout-button,
+    .login-button,
+    .register-button {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        width: calc(100% - 30px);
+
+        min-height: 68px;
+
+        padding: 0 14px;
+
+        gap: 8px;
+    }
+
+
+    .logo-box {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .logo-name {
+        font-size: 20px;
+    }
+
+
+    .navbar-menu {
+        gap: 1px;
+    }
+
+
+    .nav-link {
+        padding: 9px 7px;
+
+        font-size: 11px;
+
+        gap: 5px;
+    }
+
+
+    .nav-icon {
+        width: 16px;
+        height: 16px;
+
+        font-size: 15px;
+    }
+
+
+    .navbar-actions {
+        gap: 6px;
+    }
+
+
+    .profile-button,
+    .logout-button,
+    .login-button,
+    .register-button {
+        min-height: 40px;
+
+        padding: 8px 10px;
+
+        font-size: 11px;
+    }
+
+
+    .button-icon {
+        width: 16px;
+        height: 16px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        position: sticky;
+
+        top: 12px;
+
+        width: calc(100% - 24px);
+
+        min-height: 66px;
+
+        padding: 0 15px;
+
+        gap: 10px;
+
+        border-radius: 18px;
+    }
+
+
+    /* --------------------------------------------------------
+       LOGO
+    -------------------------------------------------------- */
+
+    .navbar-logo {
+        margin-right: 0;
+    }
+
+
+    .logo-box {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 11px;
+    }
+
+
+    .navbar-logo {
+        gap: 8px;
+    }
+
+
+    .logo-name {
+        font-size: 20px;
+    }
+
+
+    /* --------------------------------------------------------
+       DESKTOP LINKS
+       HIDDEN
+    -------------------------------------------------------- */
+
+    .navbar-menu {
+        position: absolute;
+
+        top: calc(100% + 10px);
+
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        padding: 12px;
+
+        background:
+            rgba(15, 23, 42, 0.98);
+
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+
+        border:
+            1px solid
+            rgba(148, 163, 184, 0.20);
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 20px 45px
+            rgba(15, 23, 42, 0.30);
+    }
+
+
+    /* --------------------------------------------------------
+       SHOW MOBILE MENU
+    -------------------------------------------------------- */
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+
+    /* --------------------------------------------------------
+       MOBILE NAV LINKS
+    -------------------------------------------------------- */
+
+    .nav-link {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        padding: 13px 15px;
+
+        font-size: 13px;
+
+        border-radius: 10px;
+    }
+
+
+    .nav-icon {
+        width: 19px;
+        height: 19px;
+
+        font-size: 17px;
+    }
+
+
+    /* Remove desktop underline */
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+
+    /* --------------------------------------------------------
+       RIGHT ACTIONS
+       HIDDEN FROM TOP BAR
+    -------------------------------------------------------- */
+
+    .navbar-actions {
+        display: none;
+    }
+
+
+    /* --------------------------------------------------------
+       MOBILE TOGGLE
+    -------------------------------------------------------- */
+
+    .mobile-menu-button {
+        display: flex;
+
+        margin-left: auto;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        width: calc(100% - 16px);
+
+        min-height: 64px;
+
+        padding: 0 12px;
+
+        border-radius: 16px;
+    }
+
+
+    .logo-box {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .logo-name {
+        font-size: 18px;
+    }
+
+
+    .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .navbar-menu {
+        top: calc(100% + 8px);
+
+        padding: 10px;
+
+        border-radius: 14px;
+    }
+
+
+    .nav-link {
+        padding: 12px 13px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+
+    .logo-name {
+        font-size: 17px;
+    }
+
+
+    .logo-box {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .mobile-menu-button {
+        width: 38px;
+        height: 38px;
+    }
+}

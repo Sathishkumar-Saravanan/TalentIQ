@@ -1,0 +1,478 @@
+/* ======================================================
+   CONTACT PAGE
+====================================================== */
+
+.contact-page {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px 80px;
+  background: #f5f8fc;
+  box-sizing: border-box;
+}
+
+
+/* ======================================================
+   MAIN CONTAINER
+====================================================== */
+
+.contact-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #dbe4f0;
+  border-radius: 24px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 45px rgba(15, 45, 85, 0.08);
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.contact-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 35px;
+}
+
+
+/* ======================================================
+   ICON
+====================================================== */
+
+.contact-icon {
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
+  border-radius: 22px;
+  background: #eaf1ff;
+  color: #3678ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+
+/* ======================================================
+   HEADING
+====================================================== */
+
+.contact-heading {
+  flex: 1;
+}
+
+
+.contact-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4d83e8;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+.contact-heading h1 {
+  margin: 0;
+  color: #062b61;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+
+.contact-heading p {
+  margin: 14px 0 0;
+  color: #5d7595;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ======================================================
+   SUCCESS MESSAGE
+====================================================== */
+
+.contact-success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 17px 20px;
+  box-sizing: border-box;
+
+  background: #effcf4;
+  border: 1px solid #a9e5bf;
+  border-radius: 14px;
+
+  color: #15733d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.contact-success svg {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+
+/* ======================================================
+   ERROR MESSAGE
+====================================================== */
+
+.contact-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 17px 20px;
+  box-sizing: border-box;
+
+  background: #fff4f4;
+  border: 1px solid #ffbcbc;
+  border-radius: 14px;
+
+  color: #d92d2d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.contact-error svg {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.contact-form {
+  width: 100%;
+}
+
+
+/* ======================================================
+   FIELD
+====================================================== */
+
+.contact-field {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+
+.contact-field label {
+  display: block;
+  margin-bottom: 10px;
+  color: #082d5e;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* ======================================================
+   INPUT / SELECT / TEXTAREA
+====================================================== */
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d4dfed;
+  border-radius: 15px;
+
+  background: #fbfcfe;
+
+  color: #082d5e;
+
+  font-family: inherit;
+  font-size: 17px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.contact-field input,
+.contact-field select {
+  height: 62px;
+  padding: 0 20px;
+}
+
+
+.contact-field textarea {
+  min-height: 170px;
+  padding: 18px 20px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+
+/* ======================================================
+   FOCUS
+====================================================== */
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: #3d7bea;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(61, 123, 234, 0.1);
+}
+
+
+/* ======================================================
+   DISABLED
+====================================================== */
+
+.contact-field input:disabled,
+.contact-field select:disabled,
+.contact-field textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+/* ======================================================
+   MESSAGE LABEL ROW
+====================================================== */
+
+.message-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.character-count {
+  color: #8798af;
+  font-size: 14px;
+}
+
+
+/* ======================================================
+   SUBMIT BUTTON
+====================================================== */
+
+.contact-submit {
+  width: 100%;
+  height: 64px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #3278ed,
+    #557fe0
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(50, 120, 237, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.contact-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(50, 120, 237, 0.28);
+}
+
+
+.contact-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+
+.contact-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+/* ======================================================
+   LOADING SPINNER
+====================================================== */
+
+.contact-spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: contactSpin 0.8s linear infinite;
+}
+
+
+@keyframes contactSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 768px) {
+
+  .contact-page {
+    padding: 25px 15px 60px;
+  }
+
+
+  .contact-container {
+    padding: 30px 24px;
+    border-radius: 20px;
+  }
+
+
+  .contact-header {
+    gap: 20px;
+  }
+
+
+  .contact-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 18px;
+    font-size: 30px;
+  }
+
+
+  .contact-label {
+    font-size: 14px;
+  }
+
+
+  .contact-heading h1 {
+    font-size: 34px;
+  }
+
+
+  .contact-heading p {
+    font-size: 16px;
+  }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 550px) {
+
+  .contact-page {
+    padding: 15px 10px 45px;
+  }
+
+
+  .contact-container {
+    padding: 25px 18px;
+    border-radius: 18px;
+  }
+
+
+  .contact-header {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+
+  .contact-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    font-size: 27px;
+  }
+
+
+  .contact-label {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+
+  .contact-heading h1 {
+    font-size: 30px;
+  }
+
+
+  .contact-heading p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  .contact-field {
+    margin-bottom: 22px;
+  }
+
+
+  .contact-field input,
+  .contact-field select {
+    height: 56px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+
+  .contact-field textarea {
+    min-height: 150px;
+    padding: 15px 16px;
+    font-size: 16px;
+  }
+
+
+  .contact-submit {
+    height: 58px;
+    font-size: 16px;
+  }
+
+
+  .contact-success,
+  .contact-error {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+}

@@ -1,0 +1,473 @@
+/* =========================================================
+   PRIVACY POLICY PAGE
+========================================================= */
+
+.privacy-page {
+    min-height: 100vh;
+    background: #f5f8fd;
+    color: #14213d;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.privacy-hero {
+    position: relative;
+    min-height: 390px;
+    padding: 150px 8% 80px;
+
+    background: linear-gradient(
+        135deg,
+        #071b3d 0%,
+        #0c2d61 48%,
+        #174a91 100%
+    );
+
+    overflow: hidden;
+}
+
+.privacy-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.privacy-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #63a4ff;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.privacy-hero h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+/* FIXED: Gradient applies ONLY to the text */
+.privacy-hero h1 span {
+    display: inline;
+
+    background: linear-gradient(
+        90deg,
+        #4d9aff 0%,
+        #9a7cff 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    color: transparent;
+
+    /* Prevent any rectangular background appearance */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.privacy-hero p {
+    max-width: 680px;
+
+    margin: 24px auto 0;
+
+    color: #b9cbed;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   HERO DECORATIONS
+========================================================= */
+
+.privacy-hero-decoration {
+    position: absolute;
+
+    border: 1px solid rgba(115, 163, 255, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.privacy-circle-one {
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    left: -180px;
+}
+
+.privacy-circle-two {
+    width: 550px;
+    height: 550px;
+
+    right: -260px;
+    bottom: -320px;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.privacy-main {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0 100px;
+}
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.privacy-back-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 35px;
+
+    color: #2d68dc;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.privacy-back-link:hover {
+    color: #174db0;
+    transform: translateX(-3px);
+}
+
+/* =========================================================
+   INTRO CARD
+========================================================= */
+
+.privacy-card {
+    display: flex;
+
+    gap: 25px;
+
+    align-items: flex-start;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f2;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(17, 52, 95, 0.07);
+}
+
+.privacy-card-icon {
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #3177ed,
+        #7257e9
+    );
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.privacy-card h2 {
+    margin: 0 0 13px;
+
+    color: #10264b;
+
+    font-size: 25px;
+}
+
+.privacy-card p {
+    margin: 0 0 12px;
+
+    color: #667b9d;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.privacy-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   CONTENT SECTIONS
+========================================================= */
+
+.privacy-section {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #dfe7f2;
+}
+
+.privacy-section-number {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #e8f0ff;
+
+    color: #2d6de2;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.privacy-section-content h2 {
+    margin: 0 0 14px;
+
+    color: #122b52;
+
+    font-size: 24px;
+}
+
+.privacy-section-content p {
+    margin: 0 0 14px;
+
+    color: #667b9d;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.privacy-section-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.privacy-section-content ul {
+    margin: 18px 0 0;
+
+    padding-left: 22px;
+}
+
+.privacy-section-content li {
+    margin-bottom: 11px;
+
+    color: #647a9d;
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   TITLE ROW
+========================================================= */
+
+.privacy-title-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.privacy-title-row svg {
+    color: #3478ed;
+
+    font-size: 21px;
+}
+
+.privacy-title-row h2 {
+    margin: 0;
+}
+
+/* =========================================================
+   AI SECTION
+========================================================= */
+
+.privacy-ai-section {
+    margin-top: 15px;
+
+    padding: 35px 25px;
+
+    border: 1px solid #dce7f8;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f4f8ff
+    );
+}
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.privacy-contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #0b234a,
+        #173e79
+    );
+
+    box-shadow:
+        0 15px 40px rgba(10, 37, 78, 0.15);
+}
+
+.privacy-contact-card > svg {
+    flex-shrink: 0;
+
+    font-size: 40px;
+
+    color: #6ca8ff;
+}
+
+.privacy-contact-card h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.privacy-contact-card p {
+    margin: 0 0 18px;
+
+    color: #b8c9e7;
+
+    line-height: 1.7;
+}
+
+.privacy-contact-card a {
+    display: inline-flex;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.privacy-contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .privacy-hero {
+        min-height: 350px;
+
+        padding: 130px 6% 70px;
+    }
+
+    .privacy-hero h1 {
+        font-size: clamp(42px, 12vw, 60px);
+    }
+
+    .privacy-main {
+        width: 88%;
+
+        padding-top: 50px;
+    }
+
+    .privacy-card {
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .privacy-section {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .privacy-section-number {
+        width: 45px;
+        height: 45px;
+    }
+
+    .privacy-contact-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}

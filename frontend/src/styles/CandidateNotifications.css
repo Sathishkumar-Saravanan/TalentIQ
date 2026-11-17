@@ -1,0 +1,1412 @@
+/* ============================================================
+   TALENTIQ - CANDIDATE NOTIFICATIONS
+   Clean Dark / Purple Glassmorphism Design
+   ============================================================ */
+
+/* ============================================================
+   VARIABLES
+   ============================================================ */
+
+:root {
+    --notification-bg: #0b1120;
+    --notification-bg-soft: #0f172a;
+
+    --notification-card: rgba(15, 23, 42, 0.82);
+    --notification-card-solid: #111a2e;
+
+    --notification-border: rgba(148, 163, 184, 0.12);
+    --notification-border-hover: rgba(139, 92, 246, 0.35);
+
+    --notification-text: #f8fafc;
+    --notification-text-soft: #cbd5e1;
+    --notification-text-muted: #94a3b8;
+
+    --notification-purple: #8b5cf6;
+    --notification-purple-light: #a78bfa;
+
+    --notification-blue: #60a5fa;
+    --notification-cyan: #22d3ee;
+
+    --notification-green: #34d399;
+    --notification-orange: #fb923c;
+    --notification-red: #f43f5e;
+
+    --notification-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================================
+   PAGE
+   ============================================================ */
+
+.notifications-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 42px 0 70px;
+
+    color: var(--notification-text);
+
+    background:
+        radial-gradient(
+            circle at 10% 8%,
+            rgba(124, 58, 237, 0.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(59, 130, 246, 0.10),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #0b1120 0%,
+            #0f172a 48%,
+            #0b1120 100%
+        );
+
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.notifications-container {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 0 auto;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.notifications-hero {
+    position: relative;
+
+    min-height: 225px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 40px 42px;
+
+    margin-bottom: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(139, 92, 246, 0.16);
+
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(124, 58, 237, 0.20),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(59, 130, 246, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(23, 22, 56, 0.96),
+            rgba(15, 24, 43, 0.96)
+        );
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
+/* Decorative circle */
+
+.notifications-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    right: 130px;
+    top: -80px;
+
+    border: 1px solid rgba(96, 165, 250, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.notifications-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: 35px;
+    bottom: -35px;
+
+    border: 1px solid rgba(139, 92, 246, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.notifications-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+.notifications-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    margin-bottom: 15px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(139, 92, 246, 0.28);
+
+    background: rgba(139, 92, 246, 0.08);
+
+    color: #c4b5fd;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+}
+
+.eyebrow-icon {
+    font-size: 13px;
+}
+
+.notifications-hero h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: clamp(34px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.notifications-hero p {
+    max-width: 680px;
+
+    margin: 13px 0 0;
+
+    color: #9fb0c8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+/* ============================================================
+   HERO ICON
+   ============================================================ */
+
+.notifications-hero-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 86px;
+    height: 86px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(139, 92, 246, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139, 92, 246, 0.18),
+            rgba(59, 130, 246, 0.08)
+        );
+
+    font-size: 38px;
+
+    box-shadow:
+        0 15px 40px rgba(76, 29, 149, 0.18);
+}
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+.notifications-toolbar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 20px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--notification-border);
+
+    border-radius: 18px;
+
+    background:
+        rgba(15, 23, 42, 0.70);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* ============================================================
+   SUMMARY
+   ============================================================ */
+
+.notification-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.summary-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(139, 92, 246, 0.12);
+
+    font-size: 19px;
+}
+
+.notification-summary strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.notification-summary span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+/* ============================================================
+   TOOLBAR ACTIONS
+   ============================================================ */
+
+.notification-toolbar-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.refresh-btn,
+.mark-all-btn {
+    min-height: 39px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 13px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.refresh-btn {
+    border: 1px solid rgba(148, 163, 184, 0.14);
+
+    background: rgba(30, 41, 59, 0.55);
+
+    color: #cbd5e1;
+}
+
+.refresh-btn:hover {
+    border-color: rgba(139, 92, 246, 0.28);
+
+    background: rgba(139, 92, 246, 0.08);
+
+    color: #c4b5fd;
+}
+
+.mark-all-btn {
+    border: 1px solid rgba(139, 92, 246, 0.25);
+
+    background: rgba(139, 92, 246, 0.11);
+
+    color: #c4b5fd;
+}
+
+.mark-all-btn:hover {
+    transform: translateY(-1px);
+
+    background: rgba(139, 92, 246, 0.18);
+
+    border-color: rgba(139, 92, 246, 0.42);
+}
+
+.refresh-btn:disabled,
+.mark-all-btn:disabled,
+.read-btn:disabled,
+.delete-btn:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+.refresh-icon {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+.spinning {
+    animation: rotateRefresh 0.8s linear infinite;
+}
+
+@keyframes rotateRefresh {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.notification-error {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(244, 63, 94, 0.20);
+
+    background:
+        rgba(244, 63, 94, 0.07);
+
+    color: #fecdd3;
+}
+
+.error-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(244, 63, 94, 0.12);
+
+    color: #fb7185;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.error-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.error-content strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #fda4af;
+
+    font-size: 12px;
+}
+
+.error-content span {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.error-close {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #94a3b8;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.error-close:hover {
+    background: rgba(244, 63, 94, 0.10);
+
+    color: #fda4af;
+}
+
+/* ============================================================
+   COMMON CARD
+   ============================================================ */
+
+.notifications-card {
+    border: 1px solid var(--notification-border);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.88),
+            rgba(15, 23, 42, 0.70)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.notification-loading {
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.notification-spinner {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(139, 92, 246, 0.12);
+
+    border-top-color: #8b5cf6;
+
+    animation: notificationSpin 0.8s linear infinite;
+}
+
+.notification-spinner span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #a78bfa;
+}
+
+@keyframes notificationSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.notification-loading h3 {
+    margin: 0 0 6px;
+
+    color: #e2e8f0;
+
+    font-size: 15px;
+}
+
+.notification-loading p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.empty-state {
+    min-height: 370px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 25px;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139, 92, 246, 0.14),
+            rgba(96, 165, 250, 0.08)
+        );
+
+    border: 1px solid rgba(139, 92, 246, 0.16);
+}
+
+.empty-icon span {
+    font-size: 30px;
+
+    opacity: 0.85;
+}
+
+.empty-state h2 {
+    margin: 0 0 9px;
+
+    color: #f8fafc;
+
+    font-size: 21px;
+}
+
+.empty-state p {
+    max-width: 460px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.empty-refresh-btn {
+    margin-top: 22px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(139, 92, 246, 0.22);
+
+    background: rgba(139, 92, 246, 0.08);
+
+    color: #a78bfa;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.empty-refresh-btn:hover {
+    background: rgba(139, 92, 246, 0.15);
+
+    border-color: rgba(139, 92, 246, 0.38);
+}
+
+/* ============================================================
+   NOTIFICATION SECTION
+   ============================================================ */
+
+.notifications-section {
+    width: 100%;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 14px;
+
+    padding: 0 3px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 18px;
+
+    font-weight: 750;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.notification-count {
+    min-width: 31px;
+    height: 27px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 9px;
+
+    border-radius: 999px;
+
+    background: rgba(139, 92, 246, 0.10);
+
+    border: 1px solid rgba(139, 92, 246, 0.18);
+
+    color: #c4b5fd;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+/* ============================================================
+   NOTIFICATIONS LIST
+   ============================================================ */
+
+.notifications-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+/* ============================================================
+   NOTIFICATION ITEM
+   ============================================================ */
+
+.notification-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+
+    border: 1px solid rgba(148, 163, 184, 0.10);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 23, 42, 0.88),
+            rgba(15, 23, 42, 0.70)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.notification-item:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(139, 92, 246, 0.24);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 28, 50, 0.95),
+            rgba(15, 23, 42, 0.78)
+        );
+
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* ============================================================
+   UNREAD ITEM
+   ============================================================ */
+
+.notification-item.unread {
+    border-color: rgba(139, 92, 246, 0.20);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 22, 55, 0.65),
+            rgba(15, 23, 42, 0.82)
+        );
+}
+
+.notification-item.unread::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 15px;
+    bottom: 15px;
+
+    width: 3px;
+
+    border-radius: 0 4px 4px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #a78bfa,
+            #6366f1
+        );
+}
+
+/* ============================================================
+   NOTIFICATION ICON
+   ============================================================ */
+
+.notification-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(139, 92, 246, 0.16);
+
+    background: rgba(139, 92, 246, 0.10);
+
+    font-size: 21px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   ICON TYPE COLORS
+   ============================================================ */
+
+.notification-type-application-submitted {
+    background: rgba(96, 165, 250, 0.10);
+
+    border-color: rgba(96, 165, 250, 0.18);
+}
+
+.notification-type-application-status {
+    background: rgba(139, 92, 246, 0.10);
+
+    border-color: rgba(139, 92, 246, 0.18);
+}
+
+.notification-type-shortlisted {
+    background: rgba(251, 191, 36, 0.10);
+
+    border-color: rgba(251, 191, 36, 0.18);
+}
+
+.notification-type-interview {
+    background: rgba(34, 211, 238, 0.10);
+
+    border-color: rgba(34, 211, 238, 0.18);
+}
+
+.notification-type-selected {
+    background: rgba(52, 211, 153, 0.10);
+
+    border-color: rgba(52, 211, 153, 0.18);
+}
+
+.notification-type-rejection {
+    background: rgba(244, 63, 94, 0.09);
+
+    border-color: rgba(244, 63, 94, 0.18);
+}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.notification-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.notification-title-row {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.notification-title-content {
+    min-width: 0;
+}
+
+.notification-type {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #8b5cf6;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+.notification-title-row h3 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    font-weight: 750;
+}
+
+.notification-message {
+    margin: 8px 0 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+/* ============================================================
+   UNREAD DOT
+   ============================================================ */
+
+.unread-dot {
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    box-shadow:
+        0 0 0 4px rgba(139, 92, 246, 0.08),
+        0 0 14px rgba(139, 92, 246, 0.65);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.notification-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.07);
+}
+
+/* ============================================================
+   TIME
+   ============================================================ */
+
+.notification-time-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+}
+
+.notification-relative-time {
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.notification-full-date {
+    padding-left: 9px;
+
+    border-left: 1px solid rgba(148, 163, 184, 0.14);
+
+    color: #64748b;
+
+    font-size: 9px;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.notification-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+.read-btn,
+.delete-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 31px;
+
+    padding: 0 10px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.read-btn {
+    border: 1px solid rgba(52, 211, 153, 0.17);
+
+    background: rgba(52, 211, 153, 0.07);
+
+    color: #6ee7b7;
+}
+
+.read-btn:hover {
+    background: rgba(52, 211, 153, 0.13);
+
+    border-color: rgba(52, 211, 153, 0.30);
+}
+
+.delete-btn {
+    border: 1px solid rgba(244, 63, 94, 0.15);
+
+    background: rgba(244, 63, 94, 0.05);
+
+    color: #fb7185;
+}
+
+.delete-btn:hover {
+    background: rgba(244, 63, 94, 0.11);
+
+    border-color: rgba(244, 63, 94, 0.28);
+}
+
+/* ============================================================
+   RESPONSIVE - 900px
+   ============================================================ */
+
+@media (max-width: 900px) {
+    .notifications-container {
+        width: min(100% - 32px, 760px);
+    }
+
+    .notifications-hero {
+        padding: 32px;
+    }
+
+    .notifications-hero-icon {
+        width: 72px;
+        height: 72px;
+
+        font-size: 31px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - 700px
+   ============================================================ */
+
+@media (max-width: 700px) {
+    .notifications-page {
+        padding-top: 25px;
+    }
+
+    .notifications-container {
+        width: calc(100% - 24px);
+    }
+
+    .notifications-hero {
+        min-height: auto;
+
+        padding: 28px 24px;
+
+        flex-direction: row;
+
+        align-items: center;
+    }
+
+    .notifications-hero h1 {
+        font-size: 32px;
+    }
+
+    .notifications-hero p {
+        font-size: 13px;
+    }
+
+    .notifications-hero-icon {
+        width: 60px;
+        height: 60px;
+
+        border-radius: 17px;
+
+        font-size: 26px;
+    }
+
+    .notifications-toolbar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .notification-toolbar-actions {
+        justify-content: flex-end;
+    }
+
+    .notification-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .notification-actions {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - 520px
+   ============================================================ */
+
+@media (max-width: 520px) {
+    .notifications-container {
+        width: calc(100% - 20px);
+    }
+
+    .notifications-hero {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    .notifications-eyebrow {
+        padding: 7px 10px;
+
+        font-size: 9px;
+    }
+
+    .notifications-hero h1 {
+        font-size: 27px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .notifications-hero p {
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+    .notifications-hero-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 14px;
+
+        font-size: 22px;
+    }
+
+    .notifications-toolbar {
+        padding: 14px;
+
+        border-radius: 15px;
+    }
+
+    .notification-toolbar-actions {
+        width: 100%;
+    }
+
+    .refresh-btn,
+    .mark-all-btn {
+        flex: 1;
+    }
+
+    .notification-item {
+        gap: 12px;
+
+        padding: 16px;
+    }
+
+    .notification-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+    .notification-title-row h3 {
+        font-size: 13px;
+    }
+
+    .notification-message {
+        font-size: 11px;
+    }
+
+    .notification-time-wrapper {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .notification-full-date {
+        margin-left: auto;
+    }
+
+    .notification-actions {
+        justify-content: stretch;
+    }
+
+    .read-btn,
+    .delete-btn {
+        flex: 1;
+
+        padding: 0 8px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE - 380px
+   ============================================================ */
+
+@media (max-width: 380px) {
+    .notifications-hero-icon {
+        display: none;
+    }
+
+    .notifications-hero h1 {
+        font-size: 25px;
+    }
+
+    .notification-toolbar-actions {
+        flex-direction: column;
+    }
+
+    .refresh-btn,
+    .mark-all-btn {
+        width: 100%;
+    }
+
+    .notification-item {
+        padding: 14px;
+    }
+
+    .notification-footer {
+        gap: 12px;
+    }
+
+    .notification-time-wrapper {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4px;
+    }
+
+    .notification-full-date {
+        padding-left: 0;
+
+        border-left: none;
+    }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .notification-item,
+    .refresh-btn,
+    .mark-all-btn,
+    .read-btn,
+    .delete-btn {
+        transition: none;
+    }
+
+    .spinning,
+    .notification-spinner {
+        animation: none;
+    }
+}

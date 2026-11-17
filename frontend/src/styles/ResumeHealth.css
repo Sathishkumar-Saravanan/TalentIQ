@@ -1,0 +1,824 @@
+.resume-health-page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  color: #10254a;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.resume-health-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 24px 80px;
+  background: linear-gradient(
+    135deg,
+    #101a34,
+    #263a73,
+    #4352a8
+  );
+  color: white;
+}
+
+.resume-health-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.resume-health-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 35px;
+  color: #dbe5ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resume-health-back:hover {
+  color: white;
+}
+
+.resume-health-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #9ec5ff;
+}
+
+.resume-health-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+}
+
+.resume-health-hero h1 span {
+  display: inline;
+  background: linear-gradient(
+    90deg,
+    #5aa9ff,
+    #b178ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.resume-health-hero p {
+  max-width: 700px;
+  margin-top: 25px;
+  color: #dce5ff;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.resume-health-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  border: 1px solid white;
+}
+
+.resume-health-decoration.one {
+  width: 400px;
+  height: 400px;
+  right: -130px;
+  top: -150px;
+}
+
+.resume-health-decoration.two {
+  width: 280px;
+  height: 280px;
+  left: -120px;
+  bottom: -140px;
+}
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.resume-health-main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 50px 24px 90px;
+}
+
+/* ============================================================
+   WELCOME
+============================================================ */
+
+.resume-health-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid #e2e8f5;
+  box-shadow: 0 15px 40px rgba(31, 55, 100, 0.08);
+}
+
+.resume-health-welcome span,
+.resume-health-section-heading span,
+.resume-health-file-card > span,
+.resume-health-target-card span,
+.resume-health-final-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #5572a7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.resume-health-welcome h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.resume-health-welcome p {
+  margin: 8px 0 0;
+  color: #6c7d9e;
+}
+
+.resume-health-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #edf3ff;
+  color: #3c70e8;
+  font-size: 28px;
+}
+
+/* ============================================================
+   TOP GRID
+============================================================ */
+
+.resume-health-top-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.resume-health-score-card,
+.resume-health-file-card,
+.resume-health-section {
+  background: white;
+  border: 1px solid #e2e8f5;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(31, 55, 100, 0.07);
+}
+
+.resume-health-score-card {
+  padding: 35px;
+}
+
+.resume-health-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resume-health-card-heading span {
+  display: block;
+  color: #5572a7;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.resume-health-card-heading h2 {
+  margin: 8px 0 0;
+}
+
+.resume-health-card-heading > svg {
+  color: #3976ee;
+  font-size: 28px;
+}
+
+.resume-health-score-circle {
+  width: 190px;
+  height: 190px;
+  margin: 30px auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid #e6edf9;
+}
+
+.resume-health-score-circle strong {
+  font-size: 55px;
+  line-height: 1;
+}
+
+.resume-health-score-circle span {
+  margin-top: 5px;
+  color: #7183a4;
+}
+
+.resume-health-score-circle.excellent {
+  border-color: #45bd82;
+}
+
+.resume-health-score-circle.strong {
+  border-color: #4e8cff;
+}
+
+.resume-health-score-circle.good {
+  border-color: #f1b84b;
+}
+
+.resume-health-score-circle.needs-improvement {
+  border-color: #ef7676;
+}
+
+.resume-health-score-card > p {
+  text-align: center;
+  color: #6c7d9e;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   FILE CARD
+============================================================ */
+
+.resume-health-file-card {
+  padding: 35px;
+}
+
+.resume-health-file-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  background: #eef4ff;
+  color: #3b74ea;
+  font-size: 28px;
+}
+
+.resume-health-file-card h2 {
+  margin: 8px 0;
+}
+
+.resume-health-file-card p {
+  color: #6d7d9e;
+  line-height: 1.6;
+}
+
+.resume-health-file-card small {
+  display: block;
+  color: #8796b2;
+  margin-bottom: 20px;
+}
+
+.resume-health-status-success {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #199b62;
+  font-weight: 700;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.resume-health-primary-btn,
+.resume-health-secondary-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.resume-health-primary-btn {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #3478ee,
+    #7154e8
+  );
+}
+
+.resume-health-secondary-btn {
+  color: #3469d2;
+  background: white;
+  border: 1px solid #dce5f5;
+}
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.resume-health-section {
+  padding: 32px;
+  margin-bottom: 25px;
+}
+
+.resume-health-section-heading {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.resume-health-section-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: #edf3ff;
+  color: #3975e8;
+}
+
+.resume-health-section-heading h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* ============================================================
+   SCORE GRID
+============================================================ */
+
+.resume-health-score-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.resume-health-mini-score {
+  padding: 22px;
+  border-radius: 16px;
+  background: #f5f8fe;
+  text-align: center;
+}
+
+.resume-health-mini-score span {
+  display: block;
+  color: #7183a3;
+  font-size: 13px;
+}
+
+.resume-health-mini-score strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 27px;
+  color: #306de0;
+}
+
+/* ============================================================
+   INFO GRID
+============================================================ */
+
+.resume-health-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.resume-health-info-grid > div {
+  padding: 20px;
+  border-radius: 15px;
+  background: #f6f8fd;
+}
+
+.resume-health-info-grid span {
+  display: block;
+  margin-bottom: 7px;
+  color: #7b8ca9;
+  font-size: 13px;
+}
+
+.resume-health-info-grid strong {
+  display: block;
+  color: #20385f;
+}
+
+/* ============================================================
+   SKILLS
+============================================================ */
+
+.resume-health-skills-header {
+  margin-bottom: 18px;
+}
+
+.resume-health-skills-header strong {
+  font-size: 30px;
+  color: #326ee1;
+}
+
+.resume-health-skills-header span {
+  margin-left: 8px;
+  color: #7586a4;
+}
+
+.resume-health-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-health-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-radius: 30px;
+  background: #edf4ff;
+  color: #2d61bf;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resume-health-skill svg {
+  font-size: 12px;
+}
+
+/* ============================================================
+   TWO COLUMN
+============================================================ */
+
+.resume-health-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.resume-health-two-column .resume-health-section {
+  margin-bottom: 0;
+}
+
+.resume-health-detail-card {
+  padding: 22px;
+  border-radius: 16px;
+  background: #f6f8fd;
+}
+
+.resume-health-detail-card strong {
+  display: block;
+  font-size: 18px;
+}
+
+.resume-health-detail-card p {
+  margin: 8px 0;
+  color: #66799b;
+}
+
+.resume-health-detail-card small {
+  color: #8190aa;
+}
+
+/* ============================================================
+   SECTION LIST
+============================================================ */
+
+.resume-health-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-health-section-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 15px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 15px;
+  background: #f7f9fd;
+}
+
+.resume-health-section-status {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.resume-health-section-item.complete
+  .resume-health-section-status {
+  background: #e2f8ed;
+  color: #1ca368;
+}
+
+.resume-health-section-item.incomplete
+  .resume-health-section-status {
+  background: #fff0df;
+  color: #e29a28;
+}
+
+.resume-health-section-item strong {
+  display: block;
+}
+
+.resume-health-section-item p {
+  margin: 5px 0 0;
+  color: #7183a0;
+  font-size: 14px;
+}
+
+.resume-health-section-item > span {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ============================================================
+   IMPROVEMENTS
+============================================================ */
+
+.resume-health-improvements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-health-improvement {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f7f9fd;
+}
+
+.resume-health-improvement > svg {
+  margin-top: 2px;
+  color: #e39a29;
+}
+
+.resume-health-improvement.high {
+  border-left: 4px solid #e36e6e;
+}
+
+.resume-health-improvement.medium {
+  border-left: 4px solid #e3a43b;
+}
+
+.resume-health-improvement p {
+  margin: 6px 0 0;
+  color: #7183a1;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   TARGET
+============================================================ */
+
+.resume-health-target-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #17274d,
+    #354d91
+  );
+}
+
+.resume-health-target-icon {
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.12);
+  font-size: 28px;
+}
+
+.resume-health-target-card span {
+  color: #aec4ef;
+}
+
+.resume-health-target-card h2 {
+  margin: 5px 0;
+}
+
+.resume-health-target-card p {
+  margin: 5px 0 0;
+  color: #d2dcf4;
+}
+
+.resume-health-target-card .resume-health-primary-btn {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   FINAL
+============================================================ */
+
+.resume-health-final-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    #eef4ff,
+    #f5efff
+  );
+  border: 1px solid #dce6f7;
+}
+
+.resume-health-final-card > svg {
+  font-size: 38px;
+  color: #4d69e8;
+}
+
+.resume-health-final-card h2 {
+  margin: 4px 0;
+}
+
+.resume-health-final-card p {
+  margin: 5px 0 0;
+  color: #687b9c;
+}
+
+.resume-health-final-card .resume-health-primary-btn {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   EMPTY
+============================================================ */
+
+.resume-health-empty {
+  text-align: center;
+  padding: 30px;
+}
+
+.resume-health-empty > svg {
+  font-size: 30px;
+  color: #6383bc;
+}
+
+.resume-health-empty p {
+  color: #7183a2;
+}
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.resume-health-loading {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.resume-health-spinner {
+  font-size: 45px;
+  color: #3977e8;
+  animation: resumeHealthSpin 1s linear infinite;
+}
+
+.resume-health-loading h2 {
+  margin-top: 25px;
+}
+
+.resume-health-loading p {
+  color: #7183a2;
+}
+
+/* ============================================================
+   ERROR
+============================================================ */
+
+.resume-health-error {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.resume-health-error > svg {
+  font-size: 55px;
+  color: #e7a024;
+}
+
+.resume-health-error h2 {
+  margin: 20px 0 8px;
+}
+
+.resume-health-error p {
+  color: #7183a3;
+}
+
+.resume-health-error-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@keyframes resumeHealthSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+  .resume-health-top-grid,
+  .resume-health-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-health-score-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume-health-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-health-hero {
+    padding: 90px 20px 60px;
+  }
+
+  .resume-health-main {
+    padding: 30px 15px 60px;
+  }
+
+  .resume-health-welcome,
+  .resume-health-target-card,
+  .resume-health-final-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-health-score-card,
+  .resume-health-file-card,
+  .resume-health-section {
+    padding: 24px;
+  }
+
+  .resume-health-score-grid,
+  .resume-health-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-health-section-item {
+    grid-template-columns: 35px 1fr;
+  }
+
+  .resume-health-section-item > span {
+    grid-column: 2;
+  }
+
+  .resume-health-target-card .resume-health-primary-btn,
+  .resume-health-final-card .resume-health-primary-btn {
+    margin-left: 0;
+  }
+
+  .resume-health-error-actions {
+    flex-direction: column;
+  }
+}

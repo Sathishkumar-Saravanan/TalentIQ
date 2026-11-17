@@ -1,0 +1,687 @@
+/* ============================================================
+   TALENTIQ RECRUITER POST JOB
+   ============================================================ */
+
+.recruiter-post-page {
+  min-height: 100vh;
+  padding: 125px 42px 50px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(67, 97, 238, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.13),
+      transparent 28%
+    ),
+    #050916;
+  color: #f8fafc;
+}
+
+
+.recruiter-post-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   PAGE HEADER
+   ============================================================ */
+
+.post-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+
+.post-page-kicker {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #7c9cff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+.post-page-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 850;
+  line-height: 1.05;
+}
+
+
+.post-page-header p {
+  max-width: 700px;
+  margin: 14px 0 0;
+  color: #aeb9d0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+.post-back-button {
+  flex-shrink: 0;
+  padding: 13px 19px;
+  border: 1px solid rgba(115, 145, 220, 0.32);
+  border-radius: 12px;
+  background: rgba(30, 48, 90, 0.65);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 750;
+  transition: 0.2s ease;
+}
+
+
+.post-back-button:hover {
+  background: rgba(44, 68, 120, 0.85);
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   COMPANY PREVIEW
+   ============================================================ */
+
+.company-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 26px;
+  padding: 20px 22px;
+  border: 1px solid rgba(99, 126, 202, 0.35);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 35, 70, 0.96),
+      rgba(13, 23, 48, 0.92)
+    );
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.company-preview-icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(120, 147, 255, 0.35);
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      135deg,
+      #263d83,
+      #151d44
+    );
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+
+.company-preview-content span {
+  display: block;
+  margin-bottom: 4px;
+  color: #7888a8;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.7px;
+}
+
+
+.company-preview-content h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 21px;
+}
+
+
+.company-preview-content p {
+  margin: 5px 0 0;
+  color: #a8b4cc;
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   MESSAGES
+   ============================================================ */
+
+.post-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 22px;
+  padding: 17px 19px;
+  border-radius: 14px;
+}
+
+
+.post-error {
+  border: 1px solid rgba(255, 87, 105, 0.35);
+  background: rgba(102, 20, 36, 0.32);
+}
+
+
+.post-success {
+  border: 1px solid rgba(64, 220, 151, 0.32);
+  background: rgba(15, 83, 61, 0.32);
+}
+
+
+.message-symbol {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+
+.post-message strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+
+.post-message p {
+  margin: 4px 0 0;
+  color: #bdc8dc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.recruiter-job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+.post-form-section {
+  padding: 29px;
+  border: 1px solid rgba(101, 125, 188, 0.27);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 29, 58, 0.98),
+      rgba(10, 19, 40, 0.98)
+    );
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.20);
+}
+
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+
+.section-number {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(103, 133, 228, 0.35);
+  border-radius: 12px;
+  background: rgba(51, 78, 155, 0.28);
+  color: #8eacff;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+
+.section-heading h2 {
+  margin: 2px 0 5px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
+.section-heading p {
+  margin: 0;
+  color: #8e9bb5;
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.post-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px;
+}
+
+
+.post-field {
+  min-width: 0;
+}
+
+
+.post-field-full {
+  grid-column: 1 / -1;
+}
+
+
+.post-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: #e9eef9;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+.post-field label span {
+  margin-left: 4px;
+  color: #ff6477;
+}
+
+
+.post-field input,
+.post-field select,
+.post-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(115, 136, 183, 0.31);
+  border-radius: 12px;
+  outline: none;
+  background: #0b142b;
+  color: #f8fafc;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.post-field input,
+.post-field select {
+  min-height: 49px;
+  padding: 0 14px;
+}
+
+
+.post-field textarea {
+  min-height: 130px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+
+.post-field input::placeholder,
+.post-field textarea::placeholder {
+  color: #586784;
+}
+
+
+.post-field input:focus,
+.post-field select:focus,
+.post-field textarea:focus {
+  border-color: #5f7ff1;
+  background: #0c1732;
+  box-shadow:
+    0 0 0 3px rgba(75, 105, 220, 0.14);
+}
+
+
+.post-field select {
+  cursor: pointer;
+}
+
+
+.post-field small {
+  display: block;
+  margin-top: 7px;
+  color: #6f7e9b;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.post-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13px;
+  padding: 23px 0 5px;
+}
+
+
+.post-cancel-button,
+.post-submit-button {
+  min-height: 48px;
+  padding: 0 23px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+
+.post-cancel-button {
+  border: 1px solid rgba(112, 132, 179, 0.32);
+  background: rgba(25, 36, 63, 0.9);
+  color: #c7d0e1;
+}
+
+
+.post-cancel-button:hover:not(:disabled) {
+  background: rgba(42, 57, 92, 0.95);
+}
+
+
+.post-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 150px;
+  border: 1px solid rgba(108, 139, 255, 0.45);
+  background:
+    linear-gradient(
+      135deg,
+      #3d67e9,
+      #6045df
+    );
+  color: #ffffff;
+  box-shadow:
+    0 10px 25px rgba(62, 83, 220, 0.25);
+}
+
+
+.post-submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    0 13px 30px rgba(62, 83, 220, 0.36);
+}
+
+
+.post-cancel-button:disabled,
+.post-submit-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* ============================================================
+   SPINNERS
+   ============================================================ */
+
+.button-spinner,
+.post-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: recruiterPostSpin 0.75s linear infinite;
+}
+
+
+.button-spinner {
+  width: 15px;
+  height: 15px;
+}
+
+
+.post-spinner {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 20px;
+}
+
+
+@keyframes recruiterPostSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   LOADING CARD
+   ============================================================ */
+
+.post-loading-card {
+  width: min(560px, 100%);
+  margin: 80px auto;
+  padding: 50px 30px;
+  border: 1px solid rgba(101, 125, 188, 0.3);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 29, 58, 0.98),
+      rgba(10, 19, 40, 0.98)
+    );
+  text-align: center;
+}
+
+
+.post-loading-card h2 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
+.post-loading-card p {
+  margin: 0;
+  color: #8f9db8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.recruiter-post-footer {
+  position: relative;
+  margin-top: 55px;
+  padding: 30px 4px 0;
+  border-top: 1px solid rgba(110, 129, 177, 0.18);
+}
+
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+
+.footer-brand strong {
+  display: block;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+
+.footer-brand p {
+  margin: 4px 0 0;
+  color: #6f7d98;
+  font-size: 12px;
+}
+
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 23px;
+}
+
+
+.footer-links button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #8996ae;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+
+.footer-links button:hover {
+  color: #ffffff;
+}
+
+
+.footer-bottom {
+  margin-top: 23px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(110, 129, 177, 0.12);
+  color: #59667e;
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .recruiter-post-page {
+    padding: 110px 20px 35px;
+  }
+
+
+  .post-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+
+  .post-back-button {
+    width: 100%;
+  }
+
+
+  .post-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .post-field-full {
+    grid-column: auto;
+  }
+
+
+  .post-form-section {
+    padding: 22px 18px;
+  }
+
+
+  .post-form-actions {
+    flex-direction: column-reverse;
+  }
+
+
+  .post-cancel-button,
+  .post-submit-button {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .recruiter-post-page {
+    padding: 100px 13px 25px;
+  }
+
+
+  .post-page-header h1 {
+    font-size: 31px;
+  }
+
+
+  .company-preview-card {
+    padding: 16px;
+  }
+
+
+  .company-preview-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+
+  .company-preview-content h2 {
+    font-size: 17px;
+  }
+
+
+  .section-heading {
+    gap: 11px;
+  }
+
+
+  .section-number {
+    width: 37px;
+    height: 37px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 17px;
+  }
+
+
+  .footer-links {
+    gap: 13px;
+  }
+
+}

@@ -1,0 +1,799 @@
+/* =========================================================
+   TERMS & CONDITIONS PAGE
+========================================================= */
+
+.terms-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f8fd;
+    color: #14213d;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.terms-hero {
+    position: relative;
+    min-height: 390px;
+    padding: 150px 8% 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #071b3d 0%,
+        #0c2d61 48%,
+        #174a91 100%
+    );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.terms-hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.terms-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #63a4ff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.terms-hero h1 {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    text-align: center;
+
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+
+/* IMPORTANT:
+   Keeps the gradient text inside the heading
+   and prevents strange box/overlay appearance.
+*/
+
+.terms-hero h1 span {
+    display: inline;
+
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(
+        90deg,
+        #4d9aff,
+        #9a7cff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.terms-hero p {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 24px auto 0;
+
+    color: #b9cbed;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HERO DECORATIONS
+========================================================= */
+
+.terms-hero-decoration {
+    position: absolute;
+
+    border: 1px solid rgba(115, 163, 255, 0.18);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.terms-circle-one {
+    width: 450px;
+    height: 450px;
+
+    top: -250px;
+    left: -180px;
+}
+
+
+.terms-circle-two {
+    width: 550px;
+    height: 550px;
+
+    right: -260px;
+    bottom: -320px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.terms-main {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 70px 0 110px;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.terms-back-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-bottom: 35px;
+
+    color: #2d68dc;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.terms-back-link:hover {
+    color: #174db0;
+
+    transform: translateX(-4px);
+}
+
+
+.terms-back-link svg {
+    font-size: 14px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   INTRO CARD
+========================================================= */
+
+.terms-intro-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    width: 100%;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f2;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(17, 52, 95, 0.07);
+}
+
+
+/* =========================================================
+   INTRO ICON
+========================================================= */
+
+.terms-intro-icon {
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #3177ed,
+        #7257e9
+    );
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.terms-intro-card h2 {
+    margin: 0 0 13px;
+
+    color: #10264b;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.terms-intro-card p {
+    margin: 0;
+
+    color: #667b9d;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TERMS SECTIONS
+========================================================= */
+
+.terms-section {
+    display: grid;
+
+    grid-template-columns: 70px minmax(0, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #dfe7f2;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.terms-number {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #e8f0ff;
+
+    color: #2d6de2;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.terms-content {
+    min-width: 0;
+}
+
+
+.terms-content h2 {
+    margin: 0 0 14px;
+
+    color: #122b52;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+
+.terms-content p {
+    margin: 0 0 14px;
+
+    color: #667b9d;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.terms-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TITLE ROW
+========================================================= */
+
+.terms-title-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+
+    min-width: 0;
+}
+
+
+.terms-title-row svg {
+    flex-shrink: 0;
+
+    color: #3478ed;
+
+    font-size: 21px;
+}
+
+
+.terms-title-row h2 {
+    margin: 0;
+
+    color: #122b52;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   AI SECTION
+========================================================= */
+
+.terms-ai-section {
+    margin-top: 15px;
+
+    padding: 35px 25px;
+
+    border: 1px solid #dce7f8;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f4f8ff
+    );
+}
+
+
+/* =========================================================
+   FINAL CARD
+========================================================= */
+
+.terms-final-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    width: 100%;
+
+    margin-top: 55px;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #0b234a,
+        #173e79
+    );
+
+    box-shadow:
+        0 15px 40px rgba(10, 37, 78, 0.15);
+}
+
+
+/* =========================================================
+   FINAL CARD ICON
+========================================================= */
+
+.terms-final-card > svg {
+    flex-shrink: 0;
+
+    font-size: 40px;
+
+    color: #6ca8ff;
+}
+
+
+/* =========================================================
+   FINAL CARD CONTENT
+========================================================= */
+
+.terms-final-card h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+
+.terms-final-card p {
+    margin: 0 0 18px;
+
+    color: #b8c9e7;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HELP CENTER LINK
+========================================================= */
+
+.terms-final-card a {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+
+.terms-final-card a:hover {
+    color: #7db2ff;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .terms-hero {
+        min-height: 370px;
+
+        padding:
+            140px
+            6%
+            75px;
+    }
+
+
+    .terms-hero-content {
+        max-width: 760px;
+    }
+
+
+    .terms-hero h1 {
+        font-size: clamp(40px, 7vw, 60px);
+    }
+
+
+    .terms-main {
+        width: 88%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .terms-hero {
+        min-height: 350px;
+
+        padding:
+            125px
+            6%
+            65px;
+    }
+
+
+    .terms-hero-content {
+        max-width: 100%;
+    }
+
+
+    .terms-eyebrow {
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .terms-hero h1 {
+        font-size: clamp(36px, 10vw, 50px);
+
+        line-height: 1.12;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .terms-hero h1 span {
+        white-space: normal;
+    }
+
+
+    .terms-hero p {
+        margin-top: 20px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .terms-main {
+        width: 88%;
+
+        padding:
+            50px
+            0
+            80px;
+    }
+
+
+    .terms-intro-card {
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 25px;
+    }
+
+
+    .terms-intro-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 21px;
+    }
+
+
+    .terms-intro-card h2 {
+        font-size: 22px;
+    }
+
+
+    .terms-section {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 30px 0;
+    }
+
+
+    .terms-number {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .terms-content h2 {
+        font-size: 21px;
+    }
+
+
+    .terms-title-row {
+        gap: 10px;
+    }
+
+
+    .terms-title-row svg {
+        font-size: 19px;
+    }
+
+
+    .terms-title-row h2 {
+        font-size: 21px;
+    }
+
+
+    .terms-ai-section {
+        padding: 30px 20px;
+    }
+
+
+    .terms-final-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        margin-top: 50px;
+
+        padding: 28px 25px;
+    }
+
+
+    .terms-final-card > svg {
+        font-size: 34px;
+    }
+
+
+    .terms-final-card h2 {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .terms-hero {
+        padding:
+            115px
+            5%
+            60px;
+    }
+
+
+    .terms-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .terms-hero p {
+        font-size: 15px;
+    }
+
+
+    .terms-main {
+        width: 90%;
+
+        padding-top: 40px;
+    }
+
+
+    .terms-back-link {
+        font-size: 14px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .terms-intro-card {
+        padding: 22px;
+    }
+
+
+    .terms-section {
+        padding: 27px 0;
+    }
+
+
+    .terms-content p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .terms-final-card {
+        padding: 25px 22px;
+    }
+}
