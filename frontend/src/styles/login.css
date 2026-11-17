@@ -1025,4 +1025,6 @@ input[type="text"] {
     .login-options {
         flex-direction: column;
 
-        align-items: flex
+        align-items: flex;
+    }
+}
