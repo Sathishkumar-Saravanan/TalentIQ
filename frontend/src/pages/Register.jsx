@@ -1,3 +1,4 @@
+```jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -18,9 +19,9 @@ import {
   FiSearch,
 } from "react-icons/fi";
 
-import "../styles/register.css";
+import API from "../services/api";
 
-const API_BASE_URL = "http://localhost:5000";
+import "../styles/register.css";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -165,58 +166,28 @@ const Register = () => {
       console.log("=================================");
       console.log("REGISTER REQUEST");
       console.log("=================================");
-      console.log(requestBody);
 
-      const response = await fetch(
-        `${API_BASE_URL}/api/auth/register`,
-        {
-          method: "POST",
+      // Avoid logging passwords or other sensitive credentials.
+      console.log({
+        fullName: requestBody.fullName,
+        username: requestBody.username,
+        email: requestBody.email,
+        role: requestBody.role,
+      });
 
-          headers: {
-            "Content-Type": "application/json",
-          },
+      // ========================================================
+      // REGISTER API - SHARED AXIOS INSTANCE
+      // ========================================================
 
-          body: JSON.stringify(requestBody),
-        }
+      const response = await API.post(
+        "/auth/register",
+        requestBody
       );
 
-      // ========================================================
-      // READ RESPONSE SAFELY
-      // ========================================================
-
-      const contentType = response.headers.get("content-type");
-
-      let data = {};
-
-      if (
-        contentType &&
-        contentType.includes("application/json")
-      ) {
-        data = await response.json();
-      } else {
-        const text = await response.text();
-
-        console.error("Server returned:", text);
-
-        throw new Error(
-          "Server returned an invalid response."
-        );
-      }
+      const data = response.data;
 
       console.log("REGISTER RESPONSE:");
       console.log(data);
-
-      // ========================================================
-      // BACKEND ERROR
-      // ========================================================
-
-      if (!response.ok) {
-        throw new Error(
-          data?.message ||
-            data?.error ||
-            "Unable to create account."
-        );
-      }
 
       // ========================================================
       // IMPORTANT
@@ -260,13 +231,17 @@ const Register = () => {
           },
         });
       }, 1000);
+
     } catch (err) {
       console.error("REGISTER ERROR:", err);
 
       setError(
-        err?.message ||
+        err?.response?.data?.message ||
+          err?.response?.data?.error ||
+          err?.message ||
           "Something went wrong while creating your account."
       );
+
     } finally {
       setLoading(false);
     }
@@ -638,9 +613,7 @@ const Register = () => {
                   type="button"
                   className="password-toggle"
                   onClick={() =>
-                    setShowPassword(
-                      (previous) => !previous
-                    )
+                    setShowPassword((previous) => !previous)
                   }
                   disabled={loading}
                 >
@@ -651,9 +624,7 @@ const Register = () => {
                   )}
 
                   <span>
-                    {showPassword
-                      ? "Hide"
-                      : "Show"}
+                    {showPassword ? "Hide" : "Show"}
                   </span>
                 </button>
 
@@ -694,9 +665,7 @@ const Register = () => {
                   type="button"
                   className="password-toggle"
                   onClick={() =>
-                    setShowConfirmPassword(
-                      (previous) => !previous
-                    )
+                    setShowConfirmPassword((previous) => !previous)
                   }
                   disabled={loading}
                 >
@@ -707,9 +676,7 @@ const Register = () => {
                   )}
 
                   <span>
-                    {showConfirmPassword
-                      ? "Hide"
-                      : "Show"}
+                    {showConfirmPassword ? "Hide" : "Show"}
                   </span>
                 </button>
 
@@ -782,3 +749,4 @@ const Register = () => {
 };
 
 export default Register;
+```
