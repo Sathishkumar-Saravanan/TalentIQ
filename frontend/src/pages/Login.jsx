@@ -1,3 +1,4 @@
+```jsx
 import React, { useEffect, useState } from "react";
 import {
   Link,
@@ -5,12 +6,9 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import "../styles/login.css";
+import API from "../services/api";
 
-const API_URL = (
-  import.meta.env.VITE_API_URL ||
-  "http://localhost:5000"
-).replace(/\/+$/, "");
+import "../styles/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -67,9 +65,7 @@ const Login = () => {
       user?.type ??
       "";
 
-    return String(role)
-      .trim()
-      .toLowerCase();
+    return String(role).trim().toLowerCase();
   };
 
   // ============================================================
@@ -148,31 +144,18 @@ const Login = () => {
   // ============================================================
 
   const redirectByRole = (role) => {
-    console.log(
-      "========================================"
-    );
+    console.log("========================================");
+    console.log("TALENTIQ ROLE BASED REDIRECT");
+    console.log("========================================");
 
-    console.log(
-      "TALENTIQ ROLE BASED REDIRECT"
-    );
-
-    console.log(
-      "========================================"
-    );
-
-    console.log(
-      "Authenticated role:",
-      role
-    );
+    console.log("Authenticated role:", role);
 
     // ==========================================================
     // RECRUITER
     // ==========================================================
 
     if (role === "recruiter") {
-      console.log(
-        "Redirecting to RECRUITER dashboard"
-      );
+      console.log("Redirecting to RECRUITER dashboard");
 
       navigate("/recruiter-dashboard", {
         replace: true,
@@ -186,9 +169,7 @@ const Login = () => {
     // ==========================================================
 
     if (role === "candidate") {
-      console.log(
-        "Redirecting to CANDIDATE dashboard"
-      );
+      console.log("Redirecting to CANDIDATE dashboard");
 
       navigate("/dashboard", {
         replace: true,
@@ -201,10 +182,7 @@ const Login = () => {
     // UNKNOWN
     // ==========================================================
 
-    console.error(
-      "Unknown TalentIQ account role:",
-      role
-    );
+    console.error("Unknown TalentIQ account role:", role);
 
     setError(
       "Your account role is invalid. Please contact support."
@@ -230,9 +208,7 @@ const Login = () => {
     // CLEAN INPUT
     // ==========================================================
 
-    const email = formData.email
-      .trim()
-      .toLowerCase();
+    const email = formData.email.trim().toLowerCase();
 
     const password = formData.password;
 
@@ -241,134 +217,51 @@ const Login = () => {
     // ==========================================================
 
     if (!email) {
-      setError(
-        "Please enter your email address."
-      );
-
+      setError("Please enter your email address.");
       return;
     }
 
     if (!password) {
-      setError(
-        "Please enter your password."
-      );
-
+      setError("Please enter your password.");
       return;
     }
 
     try {
       setLoading(true);
 
-      console.log(
-        "========================================"
-      );
+      console.log("========================================");
+      console.log("TALENTIQ LOGIN REQUEST");
+      console.log("========================================");
 
-      console.log(
-        "TALENTIQ LOGIN REQUEST"
-      );
-
-      console.log(
-        "========================================"
-      );
-
-      console.log(
-        "Email:",
-        email
-      );
+      console.log("Email:", email);
 
       // ========================================================
-      // LOGIN API
+      // LOGIN API - SHARED AXIOS INSTANCE
       // ========================================================
 
-      const response = await fetch(
-        `${API_URL}/api/auth/login`,
-        {
-          method: "POST",
+      const response = await API.post("/auth/login", {
+        email,
+        password,
+      });
 
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
+      const data = response.data;
 
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        }
-      );
-
-      // ========================================================
-      // CHECK RESPONSE CONTENT TYPE
-      // ========================================================
-
-      const contentType =
-        response.headers.get(
-          "content-type"
-        );
-
-      let data = null;
-
-      if (
-        contentType &&
-        contentType.includes(
-          "application/json"
-        )
-      ) {
-        data = await response.json();
-      } else {
-        const text =
-          await response.text();
-
-        console.error(
-          "Non-JSON backend response:",
-          text
-        );
-
-        throw new Error(
-          "The TalentIQ server returned an invalid response. Please check that the backend is running."
-        );
-      }
-
-      console.log(
-        "LOGIN API RESPONSE:",
-        data
-      );
-
-      // ========================================================
-      // BACKEND ERROR
-      // ========================================================
-
-      if (!response.ok) {
-        throw new Error(
-          data?.message ||
-            data?.error ||
-            "Invalid email or password."
-        );
-      }
+      console.log("LOGIN API RESPONSE:", data);
 
       // ========================================================
       // EXTRACT TOKEN
       // ========================================================
 
-      const token =
-        getTokenFromResponse(data);
+      const token = getTokenFromResponse(data);
 
       // ========================================================
       // EXTRACT USER
       // ========================================================
 
-      const user =
-        getUserFromResponse(data);
+      const user = getUserFromResponse(data);
 
-      console.log(
-        "TOKEN RECEIVED:",
-        Boolean(token)
-      );
-
-      console.log(
-        "USER RECEIVED:",
-        user
-      );
+      console.log("TOKEN RECEIVED:", Boolean(token));
+      console.log("USER RECEIVED:", user);
 
       // ========================================================
       // TOKEN VALIDATION
@@ -394,13 +287,9 @@ const Login = () => {
       // NORMALIZE ROLE
       // ========================================================
 
-      const role =
-        getUserRole(user);
+      const role = getUserRole(user);
 
-      console.log(
-        "NORMALIZED USER ROLE:",
-        role
-      );
+      console.log("NORMALIZED USER ROLE:", role);
 
       // ========================================================
       // ROLE VALIDATION
@@ -414,13 +303,10 @@ const Login = () => {
           "Invalid role received from backend:",
           {
             role: user?.role,
-            accountType:
-              user?.accountType,
-            userRole:
-              user?.userRole,
+            accountType: user?.accountType,
+            userRole: user?.userRole,
             type: user?.type,
-            completeUser:
-              user,
+            completeUser: user,
           }
         );
 
@@ -430,12 +316,7 @@ const Login = () => {
       }
 
       // ========================================================
-      // IMPORTANT
-      //
       // CLEAR OLD USER AUTHENTICATION BEFORE SAVING
-      //
-      // This prevents a previous candidate login from
-      // remaining active when a recruiter logs in.
       // ========================================================
 
       clearAuthData();
@@ -444,25 +325,12 @@ const Login = () => {
       // SAVE TOKEN
       // ========================================================
 
-      localStorage.setItem(
-        "token",
-        token
-      );
-
-      localStorage.setItem(
-        "authToken",
-        token
-      );
-
-      localStorage.setItem(
-        "accessToken",
-        token
-      );
+      localStorage.setItem("token", token);
+      localStorage.setItem("authToken", token);
+      localStorage.setItem("accessToken", token);
 
       // ========================================================
       // CREATE CLEAN USER OBJECT
-      //
-      // Make sure role exists directly on the stored user.
       // ========================================================
 
       const authenticatedUser = {
@@ -476,99 +344,57 @@ const Login = () => {
 
       localStorage.setItem(
         "user",
-        JSON.stringify(
-          authenticatedUser
-        )
+        JSON.stringify(authenticatedUser)
       );
 
       // ========================================================
       // SAVE ROLE
-      //
-      // THIS IS VERY IMPORTANT FOR NAVBAR
       // ========================================================
 
-      localStorage.setItem(
-        "role",
-        role
-      );
+      localStorage.setItem("role", role);
 
       // ========================================================
       // REMEMBER ME
       // ========================================================
 
       if (rememberMe) {
-        localStorage.setItem(
-          "rememberMe",
-          "true"
-        );
+        localStorage.setItem("rememberMe", "true");
       } else {
-        localStorage.removeItem(
-          "rememberMe"
-        );
+        localStorage.removeItem("rememberMe");
       }
 
       // ========================================================
       // DEBUG AUTH DATA
       // ========================================================
 
-      console.log(
-        "========================================"
-      );
+      console.log("========================================");
+      console.log("TALENTIQ AUTHENTICATION SAVED");
+      console.log("========================================");
 
-      console.log(
-        "TALENTIQ AUTHENTICATION SAVED"
-      );
-
-      console.log(
-        "========================================"
-      );
-
-      console.log(
-        "Role:",
-        localStorage.getItem(
-          "role"
-        )
-      );
+      console.log("Role:", localStorage.getItem("role"));
 
       console.log(
         "User:",
-        JSON.parse(
-          localStorage.getItem(
-            "user"
-          )
-        )
+        JSON.parse(localStorage.getItem("user"))
       );
 
       console.log(
         "Token:",
-        Boolean(
-          localStorage.getItem(
-            "token"
-          )
-        )
+        Boolean(localStorage.getItem("token"))
       );
 
       // ========================================================
-      // IMPORTANT
-      //
-      // Tell Navbar that authentication changed.
-      //
-      // Navbar should listen to this event.
+      // TELL NAVBAR THAT AUTHENTICATION CHANGED
       // ========================================================
 
-      window.dispatchEvent(
-        new Event("authChanged")
-      );
+      window.dispatchEvent(new Event("authChanged"));
 
       // ========================================================
       // SMALL DELAY
-      //
-      // Gives localStorage/event update time before navigation.
       // ========================================================
 
-      await new Promise(
-        (resolve) =>
-          setTimeout(resolve, 100)
+      await new Promise((resolve) =>
+        setTimeout(resolve, 100)
       );
 
       // ========================================================
@@ -578,26 +404,19 @@ const Login = () => {
       redirectByRole(role);
 
     } catch (err) {
-      console.error(
-        "========================================"
-      );
+      console.error("========================================");
+      console.error("TALENTIQ LOGIN ERROR");
+      console.error("========================================");
 
-      console.error(
-        "TALENTIQ LOGIN ERROR"
-      );
-
-      console.error(
-        "========================================"
-      );
-
-      console.error(
-        err
-      );
+      console.error(err);
 
       setError(
-        err?.message ||
+        err?.response?.data?.message ||
+          err?.response?.data?.error ||
+          err?.message ||
           "Unable to login. Please check your credentials and try again."
       );
+
     } finally {
       setLoading(false);
     }
@@ -864,10 +683,7 @@ const Login = () => {
                   type="button"
                   className="password-toggle"
                   onClick={() =>
-                    setShowPassword(
-                      (previous) =>
-                        !previous
-                    )
+                    setShowPassword((previous) => !previous)
                   }
                   disabled={loading}
                   aria-label={
@@ -876,9 +692,7 @@ const Login = () => {
                       : "Show password"
                   }
                 >
-                  {showPassword
-                    ? "Hide"
-                    : "Show"}
+                  {showPassword ? "Hide" : "Show"}
                 </button>
 
               </div>
@@ -897,9 +711,7 @@ const Login = () => {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) =>
-                    setRememberMe(
-                      e.target.checked
-                    )
+                    setRememberMe(e.target.checked)
                   }
                   disabled={loading}
                 />
@@ -910,9 +722,7 @@ const Login = () => {
 
               </label>
 
-              <Link
-                to="/forgot-password"
-              >
+              <Link to="/forgot-password">
                 Forgot password?
               </Link>
 
@@ -993,3 +803,4 @@ const Login = () => {
 };
 
 export default Login;
+```
